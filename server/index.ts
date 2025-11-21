@@ -3,8 +3,8 @@ dotenv.config();
 
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes.js";
-import { setupVite, serveStatic, log } from "./vite";
-import { setupSwagger } from "./swagger";
+import { setupVite, serveStatic, log } from "./vite.js";
+import { setupSwagger } from "./swagger.js";
 
 const app = express();
 
