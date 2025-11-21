@@ -4,7 +4,7 @@ import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
 import bcrypt from "bcrypt";
 import { storage } from "./storage.js";
-import { pool } from "./db";
+import { pool } from "./db.js";
 import {
   loginSchema,
   insertUserSchema,
