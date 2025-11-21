@@ -1,4 +1,4 @@
-import { users, series, measurements, type User, type InsertUser, type Series, type InsertSeries, type Measurement, type InsertMeasurement } from "@shared/schema.js";
+import { users, series, measurements, type User, type InsertUser, type Series, type InsertSeries, type Measurement, type InsertMeasurement } from "../shared/schema.js";
 import { db } from "./db.js";
 import { eq, desc, sql } from "drizzle-orm";
 
