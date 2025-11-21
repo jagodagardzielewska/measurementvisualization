@@ -22,6 +22,7 @@ if (!process.env.SESSION_SECRET) {
   throw new Error("SESSION_SECRET is missing! Add it to your .env file.");
 }
 
+
 const sessionMiddleware = session({
   store: new PgSession({
     pool,
@@ -66,6 +67,9 @@ async function requireAdmin(req: Request, res: Response, next: NextFunction) {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+
+  app.set("trust proxy", 1);
+  
   app.use(sessionMiddleware);
 
 
