@@ -123,18 +123,12 @@ export function MeasurementForm({ onSubmit, isPending, onCancel }: MeasurementFo
             <FormItem>
               <FormLabel>Timestamp</FormLabel>
               <FormControl>
-                <Input
+              <Input
                   {...field}
                   type="datetime-local"
-                  value={
-                    field.value
-                      ? new Date(field.value).toISOString().slice(0, 16)
-                      : ""
-                  }
+                  value={field.value ? field.value.slice(0, 16) : ""}
                   onChange={(e) => {
-                    if (e.target.value) {
-                      field.onChange(new Date(e.target.value).toISOString());
-                    }
+                    field.onChange(e.target.value);
                   }}
                 />
               </FormControl>
