@@ -5,13 +5,11 @@
       "moduleResolution": "bundler",
       "esModuleInterop": true,
       "strict": true,
-      "rootDir": "..",
-      "outDir": "../dist/server",
       "baseUrl": "..",
       "paths": {
         "@shared/*": ["shared/*"]
       }
     },
-    "include": ["../server/**/*", "../shared/**/*"]
+    "include": ["./**/*"]
   }
   
