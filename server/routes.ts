@@ -13,7 +13,8 @@ import {
   updateSeriesSchema,
   insertMeasurementSchema,
   updateMeasurementSchema,
-} from "@shared/schema";
+} from "../shared/schema";
+
 
 const PgSession = connectPgSimple(session);
 
