@@ -9,7 +9,8 @@
       "paths": {
         "@shared/*": ["shared/*"]
       },
-      "skipLibCheck": true 
+      "skipLibCheck": true,
+      "rootDir": "."  
     },
     "include": ["./**/*"]
   }
