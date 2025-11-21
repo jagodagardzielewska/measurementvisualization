@@ -5,6 +5,10 @@
       "moduleResolution": "bundler",
       "esModuleInterop": true,
       "strict": true,
+  
+      "rootDir": "./",
+      "outDir": "../dist/server",
+  
       "baseUrl": "..",
       "paths": {
         "@shared/*": ["shared/*"]
