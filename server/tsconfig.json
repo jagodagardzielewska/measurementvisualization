@@ -13,7 +13,8 @@
   
       "skipLibCheck": true,
   
-      "outDir": "../dist/server"
+      "rootDir": ".",            
+      "outDir": "../dist/server" 
     },
     "include": [
       "./**/*",
