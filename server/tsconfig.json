@@ -13,12 +13,13 @@
   
       "skipLibCheck": true,
   
-      "rootDir": "../server",
-      "outDir": "../dist/server/server"
+      "rootDir": "..",
+      "outDir": "../dist/server"
     },
     "include": [
       "../server/**/*",
-      "../shared/**/*"
+      "../shared/**/*",
+      "../vite.config.ts"
     ],
     "exclude": [
       "../dist"
