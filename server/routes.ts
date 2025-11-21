@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
 import bcrypt from "bcrypt";
-import { storage } from "./storage";
+import { storage } from "./storage.js";
 import { pool } from "./db";
 import {
   loginSchema,
