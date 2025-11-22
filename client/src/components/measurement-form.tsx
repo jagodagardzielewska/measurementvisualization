@@ -116,26 +116,28 @@ export function MeasurementForm({ onSubmit, isPending, onCancel }: MeasurementFo
           </Alert>
         )}
 
-        <FormField
-          control={form.control}
-          name="timestamp"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Timestamp</FormLabel>
-              <FormControl>
-              <Input
-                  {...field}
-                  type="datetime-local"
-                  value={field.value ? field.value.slice(0, 16) : ""}
-                  onChange={(e) => {
-                    field.onChange(e.target.value);
-                  }}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
+<FormField
+  control={form.control}
+  name="timestamp"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Timestamp</FormLabel>
+      <FormControl>
+        <Input
+          type="datetime-local"
+          value={field.value ? field.value.slice(0, 16) : ""}
+          onChange={(e) => {
+            const local = e.target.value;
+            const iso = new Date(local).toISOString();
+            field.onChange(iso);
+          }}
         />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
 
         <div className="flex gap-2 pt-3">
           {onCancel && (
